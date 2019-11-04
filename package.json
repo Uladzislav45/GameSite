@@ -1,0 +1,20 @@
+{
+  "name": "idf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "vladimir kamenkov",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "rimraf": "^2.6.3"
+  }
+}
