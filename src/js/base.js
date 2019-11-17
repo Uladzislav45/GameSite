@@ -1,3 +1,4 @@
+//slider
 var slideIndex = 1;
 showSlides(slideIndex);
 function plusSlide() {
@@ -25,4 +26,7 @@ function showSlides(n) {
 }
   setInterval(function(){
 plusSlide();
-  }, 2000);
+  }, 5000);
+
+//modal
+  
