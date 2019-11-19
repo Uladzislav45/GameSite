@@ -55,7 +55,51 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
     </script>
-    <script src="js/main.js"></script>
+    <script>
+        
+var form = document.querySelector('.contact-form');
+var requireInputs = document.querySelectorAll('.require');
+
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    removeAlerts();
+    checkInputs();
+});
+
+function checkInputs() {
+    var emptyInputs = 0; 
+      for (var i = 0; i < requireInputs.length; i++) {
+          if(!requireInputs[i].value) {
+            var formValid = true;
+           emptyInputs++;
+           var errorMsg = document.createElement('span');
+           errorMsg.classList.add('help-block');
+           errorMsg.innerHTML = 'Enter text'; 
+           requireInputs[i].classList.add('errorMsg');
+           requireInputs[i].parentElement.insertBefore(errorMsg, null);
+          } 
+             }
+             if (emptyInputs === 0) {
+             return true; 
+           } else {
+             var formValid = false;
+               return false;
+           }
+  if(formValid){
+    
+  }
+   }
+   function removeAlerts() {
+    var alerts = document.querySelectorAll('.help-block');
+for(var i = 0; i < alerts.length; i++) {
+    alerts[i].remove();
+}
+for(var i = 0; i < requireInputs.length; i++) {
+    requireInputs[i].classList.remove('errorMsg');
+}
+}
+
+    </script>
 
 </body>
 
