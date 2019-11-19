@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Fantasy World</title>
+    <link rel="shortcut icon" href="img/gamesc.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="layouts_header_left">
+            <div class="top-nav-text">
+                <p>Call Us : <span class="call">+375 25 650 73 22</span></p>
+                <p>Email Us : <span class="mail"><a
+                            href="mailto:uladislav.stankevich@gmail.com">uladislav.stankevich@gmail.com</a></span></p>
+            </div>
+        </div>
+        <div class="layouts_header_right">
+            <form action="#">
+                <input name="Search heare" type="search" placeholder="Search" required="">
+                <input type="submit"  value="">
+            </form>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <div class="navigation">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navigation_pos">
+                        <h1><a href="index.html"><span>Fantasy</span> World</a></h1>
+                    </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html"><span>Home</span></a></li>
+    
+                            <li><a href="overview.html">Overview</span></a></li>
+                            
+                            <li><a href="#work" >Gallery</a></li>
+                            
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+   <div class="contact">
+       <div class="container">
+        <h3 class="head">Contact Us</h3>
+        <p class="head_para">send us a message</p>
+        <p class="message"></p>
+        <form id="contact-form" class="contact-form">
+            <div class="col-md-6 mail_grids">
+                <span class="input">
+                    <input class="input__field require" type="text" id="name"  placeholder="Your Name">
+                </span>
+                <span class="input">
+                    <input class="input__field require" type="email" id="email" placeholder="Your Email " >
+                </span>
+                <span class="input">
+                    <input class="input__field require " type="text" id="phone" placeholder="Your Phone Number ">
+                </span>
+            </div>
+            <div class="col-md-6 mail_grids">
+                <textarea name="Message" class="txarea" placeholder="Your Message" ></textarea>
+                <button type="submit" class="btn-contact" id="btn-contact" >Submit</button>
+            </div>
+            
+        </form>
+
+       </div>
+   </div>
+
+
+    <div class="footer">
+        <div class="container">
+            
+            <div class="footer_grids">
+                
+                <div class="footer_grid">
+                    <div class=" footer_grid_left">
+                        <div class="footer_grid_leftl">
+                            <i class="glyphicon glyphicon-globe" aria-hidden="true"></i>
+                        </div>
+                        <div class="footer_grid_leftr">
+                            <h4>Location</h4>
+                            <p>Minsk city</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="footer_grid_left">
+                        <div class="footer_grid_leftl">
+                            <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="footer_grid_leftr">
+                            <h4>Email</h4>
+                            <a href="mailto:info@example.com">uladislav.stankevich@gmail.com</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="footer_grid_left">
+                        <div class="footer_grid_leftl">
+                            <i class="glyphicon glyphicon-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="footer_grid_leftr">
+                            <h4>Call Us</h4>
+                            <p>+375 25 650 73 22</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_pos">
+            <p>© 2019 Fantasy World. All Rights Reserved</p>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
