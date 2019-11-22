@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Fantasy World</title>
+    <link rel="shortcut icon" href="img/gamesc.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    //= templates/header.html
+    <div class="galleryt">
+        <h3 class="head">Gallery</h3>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <div class="item">
+                <p><img src="img/g1.jpg"></p>
+
+            </div>
+
+            <div class="item">
+                <p><img src="img/g2.jpg"></p>
+
+            </div>
+
+            <div class="item">
+                <p><img src="img/g3.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g4.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g5.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g6.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g7.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g8.jpg"></p>
+
+            </div>
+
+            <a class="prev" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+        </div>
+
+        <div class="gallery-dots">
+            <span class="gallery-dots_item" onclick="currentSlide(1)"><img src="img/g1-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(2)"><img src="img/g2-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(3)"><img src="img/g3-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(4)"><img src="img/g4-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(5)"><img src="img/g5-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(6)"><img src="img/g6-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(7)"><img src="img/g7-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(8)"><img src="img/g8-small.jpg" alt=""></span>
+        </div>
+
+    </div>
+    //= templates/footer.html
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
+    <script>
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        
+        function plusSlide() {
+            showSlides(slideIndex += 1);
+        }
+
+        
+        function minusSlide() {
+            showSlides(slideIndex -= 1);
+        }
+
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("item");
+            var dots = document.getElementsByClassName("gallery-dots_item");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

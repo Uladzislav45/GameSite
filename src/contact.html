@@ -18,33 +18,35 @@
 
 <body>
     //= templates/header.html
-   <div class="contact">
-       <div class="container">
-        <h3 class="head">Contact Us</h3>
-        <p class="head_para">send us a message</p>
-        <p class="message"></p>
-        <form id="contact-form" class="contact-form">
-            <div class="col-md-6 mail_grids">
-                <span class="input">
-                    <input class="input__field require" type="text" id="name"  placeholder="Your Name">
-                </span>
-                <span class="input">
-                    <input class="input__field require" type="email" id="email" placeholder="Your Email " >
-                </span>
-                <span class="input">
-                    <input class="input__field require " type="text" id="phone" placeholder="Your Phone Number ">
-                </span>
-            </div>
-            <div class="col-md-6 mail_grids">
-                <textarea name="Message" class="txarea" placeholder="Your Message" ></textarea>
-                <button type="submit" class="btn-contact" id="btn-contact" >Submit</button>
-            </div>
-            
-        </form>
+    <div class="contact">
+        <div class="mail" id="mail">
+            <div class="container">
+                <h3 class="head">Contact Us</h3>
+                <p class="head_para">send us a message</p>
+                <p class="message"></p>
+                <form id="contact-form" class="contact-form">
+                    <div class="col-md-6 mail_grids">
+                        <span class="input">
+                            <input class="input__field require" type="text" id="name" placeholder="Your Name">
+                        </span>
+                        <span class="input">
+                            <input class="input__field require" type="email" id="email" placeholder="Your Email ">
+                        </span>
+                        <span class="input">
+                            <input class="input__field require " type="text" id="phone"
+                                placeholder="Your Phone Number ">
+                        </span>
+                    </div>
+                    <div class="col-md-6 mail_grids">
+                        <textarea name="Message" class="txarea" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn-contact" id="btn-contact">Submit</button>
+                    </div>
 
-       </div>
-   </div>
+                </form>
 
+            </div>
+        </div>
+    </div>
 
     //= templates/footer.html
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -55,51 +57,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
     </script>
-    <script>
-        
-var form = document.querySelector('.contact-form');
-var requireInputs = document.querySelectorAll('.require');
-
-form.addEventListener('submit', function(event){
-    event.preventDefault();
-    removeAlerts();
-    checkInputs();
-});
-
-function checkInputs() {
-    var emptyInputs = 0; 
-      for (var i = 0; i < requireInputs.length; i++) {
-          if(!requireInputs[i].value) {
-            var formValid = true;
-           emptyInputs++;
-           var errorMsg = document.createElement('span');
-           errorMsg.classList.add('help-block');
-           errorMsg.innerHTML = 'Enter text'; 
-           requireInputs[i].classList.add('errorMsg');
-           requireInputs[i].parentElement.insertBefore(errorMsg, null);
-          } 
-             }
-             if (emptyInputs === 0) {
-             return true; 
-           } else {
-             var formValid = false;
-               return false;
-           }
-  if(formValid){
-    
-  }
-   }
-   function removeAlerts() {
-    var alerts = document.querySelectorAll('.help-block');
-for(var i = 0; i < alerts.length; i++) {
-    alerts[i].remove();
-}
-for(var i = 0; i < requireInputs.length; i++) {
-    requireInputs[i].classList.remove('errorMsg');
-}
-}
-
-    </script>
+    <script src="js/main.js"> </script>
 
 </body>
 

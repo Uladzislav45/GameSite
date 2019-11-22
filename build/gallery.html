@@ -65,36 +65,62 @@
             </nav>
         </div>
     </div>
-    <div class="contact">
-        <div class="mail" id="mail">
-            <div class="container">
-                <h3 class="head">Contact Us</h3>
-                <p class="head_para">send us a message</p>
-                <p class="message"></p>
-                <form id="contact-form" class="contact-form">
-                    <div class="col-md-6 mail_grids">
-                        <span class="input">
-                            <input class="input__field require" type="text" id="name" placeholder="Your Name">
-                        </span>
-                        <span class="input">
-                            <input class="input__field require" type="email" id="email" placeholder="Your Email ">
-                        </span>
-                        <span class="input">
-                            <input class="input__field require " type="text" id="phone"
-                                placeholder="Your Phone Number ">
-                        </span>
-                    </div>
-                    <div class="col-md-6 mail_grids">
-                        <textarea name="Message" class="txarea" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn-contact" id="btn-contact">Submit</button>
-                    </div>
-
-                </form>
+    <div class="galleryt">
+        <h3 class="head">Gallery</h3>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <div class="item">
+                <p><img src="img/g1.jpg"></p>
 
             </div>
-        </div>
-    </div>
 
+            <div class="item">
+                <p><img src="img/g2.jpg"></p>
+
+            </div>
+
+            <div class="item">
+                <p><img src="img/g3.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g4.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g5.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g6.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g7.jpg"></p>
+
+            </div>
+            <div class="item">
+                <p><img src="img/g8.jpg"></p>
+
+            </div>
+
+            <a class="prev" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+        </div>
+
+        <div class="gallery-dots">
+            <span class="gallery-dots_item" onclick="currentSlide(1)"><img src="img/g1-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(2)"><img src="img/g2-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(3)"><img src="img/g3-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(4)"><img src="img/g4-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(5)"><img src="img/g5-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(6)"><img src="img/g6-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(7)"><img src="img/g7-small.jpg" alt=""></span>
+            <span class="gallery-dots_item" onclick="currentSlide(8)"><img src="img/g8-small.jpg" alt=""></span>
+        </div>
+
+    </div>
     <div class="footer">
         <div class="container">
             
@@ -147,7 +173,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
     </script>
-    <script src="js/main.js"> </script>
+    <script>
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        
+        function plusSlide() {
+            showSlides(slideIndex += 1);
+        }
+
+        
+        function minusSlide() {
+            showSlides(slideIndex -= 1);
+        }
+
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("item");
+            var dots = document.getElementsByClassName("gallery-dots_item");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 
 </body>
 
