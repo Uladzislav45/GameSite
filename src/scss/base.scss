@@ -145,6 +145,7 @@ body a:hover {
     margin-right: 0px !important;
 }
 
+
 .navigation_pos {
     position: absolute;
     top: 24%;
@@ -437,31 +438,37 @@ a.hi-icon img {
 
 
 //overview
-.overview {
-    max-width: 100%;
+
+
+.overview-item{
+    border: 2px solid #fa3d03;
     position: relative;
-    margin: auto;
-    height: 800px;
-    margin-bottom: 15px;
-    background: url("/img/slide4.jpg");
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  
 }
-
-.container-overview {
-    width: 960px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 20px;
-    margin: 0 auto;
+.overview-item img{
+    width: 300px;
+    height: 200px;
+    
 }
-
-.overview-content {
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 60px;
-    background: #f83e03;
+.overview-item p{
+ width: auto;
+ padding: 15px;
 }
-
-
+.overview-item .btn-overview{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: #111;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+}
+.overview-item .btn-overview:hover{
+    background: #fa3d03;
+}
 
 
 
@@ -555,6 +562,35 @@ a.hi-icon img {
     border-color: red;
 }
 
+.messeg{
+    width: 300px;
+    margin-left: 400px;
+    position: fixed;
+    top: 50px;
+    animation-name: animatetop;
+    animation-duration: 2s
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:50px; opacity:2}
+}
+.messeg-none{
+    display: none;
+}
+
+
+
+.messeg p{
+    height: auto;
+    text-align: center;
+    background: rgb(132, 219, 132);
+    border: 2px solid green;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
 //gallery
 .galleryt{
     margin-top: 20px;
@@ -610,6 +646,7 @@ a.hi-icon img {
     margin-bottom: 20px;
     
 }
+
 .gallery-dots_item{
     cursor: pointer;
     height: 77px;
@@ -618,6 +655,9 @@ a.hi-icon img {
     display: inline-block;
     transition: background-color 0.6s ease;
     border: 2px solid slategrey;
+}
+.active, .gallery-dots_item:hover{
+        border-color: #ff5000;
 }
 
 .gallery .item {
