@@ -12,57 +12,65 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.css">
+        <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
     //= templates/header.html
-    <div class="container">
-        <div class="contact">
-            <div class="mail" id="mail">
-                <div class="container">
-                    <h3 class="head">Contact Us</h3>
-                    <p class="head_para">send us a message</p>
-                    <p class="message"></p>
-                    <form id="contact-form" class="contact-form">
-                        <div class="col-md-6 mail_grids">
-                            <span class="input">
-                                <input class="input__field require" type="text" id="name" placeholder="Your Name">
-                            </span>
-                            <span class="input">
-                                <input class="input__field require" type="email" id="email" placeholder="Your Email ">
-                            </span>
-                            <span class="input">
-                                <input class="input__field require " type="text" id="phone"
-                                    placeholder="Your Phone Number ">
-                            </span>
-                        </div>
-                        <div class="col-md-6 mail_grids">
-                            <textarea name="Message" class="txarea" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn-contact" id="btn-contact">Submit</button>
-                        </div>
 
-                    </form>
+    <div class="contact">
+        <div class="mail" id="mail">
+            <div class="container">
+                <h3 class="head">Contact Us</h3>
+                <p class="head_para">send us a message</p>
+                <p class="message"></p>
+                <form id="contact-form" class="contact-form" action="" method="POST">
+                    <div class="col-md-6 mail_contact">
+                        <span class="input">
+                            <input class="input__field require" type="text" id="name" placeholder="Your Name">
+                        </span>
+                        <span class="input">
+                            <input class="input__field require" type="email" id="email" placeholder="Your Email ">
+                        </span>
+                        <span class="input">
+                            <input class="input__field require " type="text" id="phone"
+                                placeholder="Your Phone Number ">
+                        </span>
+                        <div class="messeg-none" id="messeg">
+                            <p>Your message has been sent.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mail_contact">
+                        <textarea name="Message" class="txarea" placeholder="Your Message"></textarea>
+                        <button type="submit" onclick="check(event)" class="btn-contact" id="btn">Submit</button>
+                    </div>
 
-                </div>
+                </form>
+
             </div>
         </div>
-        
-            <div class="messeg-none" id="messeg">
-                <p>Your message has been sent.</p>
-            </div>
-        
     </div>
+
+
+
+
     //= templates/footer.html
+    //= templates/scrollUp.html
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
     </script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
-    </script>
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.4/js/lightgallery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"> </script>
 
 </body>
