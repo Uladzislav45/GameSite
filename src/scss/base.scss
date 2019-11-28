@@ -583,11 +583,11 @@ a.hi-icon img {
 	border: none;
 	border: 2px solid #b6b5b5;
 	width: 100%;
-	margin: 1.5em 0 3em 0.1em;
+	margin: 1.5em 0 1em 0.1em;
 	min-height: 150px;
 	resize: none;
 	font-weight: 600;
-	height: 240px;
+	height: 200px;
 }
 
 .mail_contact .btn-contact {
@@ -601,7 +601,8 @@ a.hi-icon img {
 	font-weight: 600;
 	background: #111;
 	padding: 0.9em;
-	margin-top: 2em;
+	margin-top: 1em;
+	margin-bottom: 2em;
 }
 .btn-contact_disabled{
 	cursor: default; 
@@ -615,7 +616,8 @@ a.hi-icon img {
 	font-weight: 600;
 	background: rgb(68, 68, 68);
 	padding: 0.9em;
-	margin-top: 2em;
+	margin-top: 1em;
+	margin-bottom: 2em;
 }
 .mail_contact .btn-contact:hover {
 	background: #fa3d03;
@@ -678,7 +680,7 @@ a.hi-icon img {
    }
 }
 .messeg-none {
-	display: none;
+	visibility: hidden;
 }
 
 .messeg p {
