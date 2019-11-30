@@ -92,10 +92,28 @@ function removeAlerts() {
     }
 }
 
-
- 
-
-
+// var reg = document.getElementById('name');
+// reg.onkeypress = function(e) {   
+//   var prohibited = "!@#$%^&*()№+=;:`~\|'?/.><,\"0123456789";
+// 	var key = String.fromCharCode(e.which);
+//   if(prohibited.indexOf(key) >= 0){
+// 		console.log('invalid key pressed');    
+//    	return false;
+//   }
+//   return true;    
+// };
+// function validEmail(e) {
+//     var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+//     return String(e).search (filter) != -1;
+// }
+// function validEmail(event) {
+//     var filter = "!@#$%^&*()№+=;:`~\|'?/.><,\"0123456789";
+//     return String(event).search (filter) != -1;
+// }
+function isEmailAddress(event) {
+    var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return pattern.test(event);  // returns a boolean 
+ }
  
 
 
