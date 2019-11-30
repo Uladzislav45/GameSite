@@ -498,7 +498,7 @@ a.hi-icon img {
 	border: 2px solid #fa3d03;
 	position: relative;
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: space-around;
 	margin-bottom: 20px;
 	width: 100%;
 }
@@ -514,10 +514,10 @@ a.hi-icon img {
 .overview h3 {
 	font-weight: bolder;
 	color: #000001;
+	margin-top: 30px;
 }
 
 .overview-item p {
-	width: 740px !important;
 	font-size: 15px;
 	color: #000001;
 	width: auto;
@@ -531,6 +531,7 @@ a.hi-icon img {
 	background: #111;
 	text-transform: uppercase;
 	border: none;
+	border-radius: 5px;
 	color: white;
 }
 
@@ -539,16 +540,18 @@ a.hi-icon img {
 }
 
 
-.modal-body{
+.modal-body {
 	padding: 18px;
 }
+
 .modal-header {
 	padding: 15px;
 	border-bottom: 2px solid #fa3d03;
 }
-.modal-body iframe{
-	width:560px;
-	height:315px;
+
+.modal-body iframe {
+	width: 560px;
+	height: 315px;
 }
 
 //contact
@@ -604,8 +607,9 @@ a.hi-icon img {
 	margin-top: 1em;
 	margin-bottom: 2em;
 }
-.btn-contact_disabled{
-	cursor: default; 
+
+.btn-contact_disabled {
+	cursor: default;
 	outline: none;
 	color: #fff;
 	letter-spacing: 5px;
@@ -619,6 +623,7 @@ a.hi-icon img {
 	margin-top: 1em;
 	margin-bottom: 2em;
 }
+
 .mail_contact .btn-contact:hover {
 	background: #fa3d03;
 }
@@ -657,7 +662,7 @@ a.hi-icon img {
 }
 
 .messeg {
-	
+
 	position: relative;
 	margin-top: 80px;
 	height: auto;
@@ -671,14 +676,17 @@ a.hi-icon img {
 	animation-iteration-count: 3;
 	animation-direction: alternate;
 }
+
 @keyframes slidein {
 	from {
-	 opacity: 0;
+		opacity: 0;
 	}
+
 	to {
-	opacity: 1;
-   }
+		opacity: 1;
+	}
 }
+
 .messeg-none {
 	visibility: hidden;
 }
@@ -688,6 +696,7 @@ a.hi-icon img {
 	font-size: 14px;
 	animation-duration: 3s;
 }
+
 //gallery
 
 .gallery li {
@@ -706,50 +715,56 @@ a.hi-icon img {
 	position: absolute;
 	left: 0;
 	transition: all 300ms ease-out;
+
 }
 
 .box .overbox {
 	background-color: hsla(0, 0%, 11%, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    z-index: 100;
-    transition: all 300ms ease-out;
-    opacity: 0;
-    width: 100%;
-    padding: 7em 2em 2em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	z-index: 100;
+	transition: all 300ms ease-out;
+	opacity: 0;
+	width: 100%;
+	padding: 7em 2em 2em;
 }
-.box,.box .overbox {
+
+.box,
+.box .overbox {
 	height: 230px;
 }
-.box:hover .overbox { opacity: 1; }
+
+.box:hover .overbox {
+	opacity: 1;
+}
 
 .box .overtext {
-  transition: all 300ms ease-out;
-  transform: translateY(40px);
+	transition: all 300ms ease-out;
+	transform: translateY(40px);
 }
 
 .box .title {
-     font-size: 1.6em;
-    text-transform: uppercase;
-    opacity: 0;
-    transition-delay: 0.1s;
-    transition-duration: 0.2s;
-    background: rgba(236, 81, 9, 0.72);
-    text-align: center;
-    padding: 10px;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	opacity: 0;
+	transition-delay: 0.1s;
+	transition-duration: 0.2s;
+	background: rgba(236, 81, 9, 0.72);
+	text-align: center;
+	padding: 10px;
 }
 
 .box:hover .title,
 .box:focus .title {
-  opacity: 1;
-  transform: translateY(0px);
+	opacity: 1;
+	transform: translateY(0px);
 }
 
 .box .tagline {
 	font-size: 13px;
-    line-height:1.8em;
+	line-height: 1.8em;
 	opacity: 0;
 	transition-delay: 0.2s;
 	transition-duration: 0.2s;
@@ -757,12 +772,13 @@ a.hi-icon img {
 
 .box:hover .tagline,
 .box:focus .tagline {
-  opacity: 1;
-  transform: translateX(0px);
-  -webkit-transform: translateX(0px);
+	opacity: 1;
+	transform: translateX(0px);
+	-webkit-transform: translateX(0px);
 }
+
 ul#lightGallery {
-    margin-top: 2em;
+	margin-top: 2em;
 }
 
 
@@ -885,10 +901,13 @@ ul#lightGallery {
 		font-size: 1.1em;
 		letter-spacing: 2px;
 	}
+
 	.box .overbox {
 		padding: 6em 1em 2em;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 189px;
 	}
 
@@ -1024,14 +1043,23 @@ ul#lightGallery {
 	.footer_pos {
 		margin-top: 2em;
 	}
+
 	.box .title {
 		font-size: 1.2em;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 146px;
 	}
+
 	.box .overbox {
 		padding: 4em 1em 2em;
+	}
+
+	.overview-item p {
+		font-size: 11px;
+
 	}
 }
 
@@ -1103,6 +1131,9 @@ ul#lightGallery {
 		position: relative;
 		width: 40%;
 	}
+	.overview h3 {
+		font-size: 18px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -1129,6 +1160,11 @@ ul#lightGallery {
 		margin: 2em 0 0;
 	}
 
+	.overview-item img {
+		width: 280px;
+		height: 170px;
+
+	}
 }
 
 @media (max-width: 767px) {
@@ -1192,11 +1228,27 @@ ul#lightGallery {
 	.mail {
 		padding: 2em 0;
 	}
+
 	.box .overbox {
 		padding: 3em 1em 2em;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 139px;
+	}
+
+	.overview-item img {
+		width: 230px;
+		height: 130px;
+	}
+
+	.overview-item p {
+		font-size: 9px;
+	}
+
+	.overview-item .btn-overview {
+		font-size: 12px;
 	}
 }
 
@@ -1228,9 +1280,12 @@ ul#lightGallery {
 	.layouts_header_right input[type="search"] {
 		width: 83%;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 125px;
 	}
+
 	.box .title {
 		font-size: 1em;
 	}
@@ -1250,8 +1305,19 @@ ul#lightGallery {
 		letter-spacing: 5px;
 		font-size: 12px !important;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 114px;
+	}
+
+	.overview-item .btn-overview {
+		font-size: 9px;
+	}
+
+	.overview-item img {
+		width: 220px;
+		height: 150px;
 	}
 }
 
@@ -1270,18 +1336,30 @@ ul#lightGallery {
 		position: absolute;
 		top: 21%;
 	}
+
+	.overview-item .btn-overview {
+		position: sticky;
+		border-radius: 0 8px 8px 0;
+	}
+
+	.overview-item img {
+		width: 250px;
+		height: 180px;
+	}
 }
 
 @media (max-width: 568px) {
 	.agileits_banner_bottom_grid_l h4 {
 		font-size: 1.4em;
 	}
+
 	.gallery li {
 		display: inline-block;
 		float: left;
 		width: 50%;
 		padding: 1%;
 	}
+
 	.footer {
 		padding: 2em 0 2em 0;
 	}
@@ -1289,11 +1367,37 @@ ul#lightGallery {
 	.footer_pos {
 		margin-top: 1em;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 166px;
 	}
+
 	.box .overbox {
 		padding: 5em 1em 2em;
+	}
+
+	.overview-item {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.overview-item .btn-overview {
+		position: absolute;
+		border-radius: 5px;
+		font-size: 12px;
+		right: 10px;
+		bottom: 10px;
+	}
+
+	.overview-item img {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.overview-item p {
+		font-size: 11px;
 	}
 }
 
@@ -1319,10 +1423,6 @@ ul#lightGallery {
 		font-size: 1.4em;
 		letter-spacing: 4px;
 	}
-
-
-
-
 	.agile_mail_grid textarea {
 		outline: none;
 		min-height: 119px;
@@ -1332,11 +1432,17 @@ ul#lightGallery {
 	.agile_mail_grid {
 		padding: 0 0px;
 	}
+
 	.box .overbox {
 		padding: 4em 1em 2em;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 138px;
+	}
+	.overview-item p {
+		font-size: 9px;
 	}
 }
 
@@ -1394,12 +1500,16 @@ ul#lightGallery {
 		top: -28%;
 		right: -3%;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 112px;
 	}
+
 	.box .overbox {
 		padding: 3em 1em 2em;
 	}
+
 	ul#lightGallery {
 		margin-top: 1em;
 	}
@@ -1433,10 +1543,13 @@ ul#lightGallery {
 		margin-top: 20px;
 		font-size: 1.2em;
 	}
+
 	.box .overbox {
 		padding: 3em 1em 2em;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 103px;
 	}
 }
@@ -1451,6 +1564,11 @@ ul#lightGallery {
 
 	.navigation_pos h1 a {
 		font-size: .65em;
+	}
+	.overview-item .btn-overview {
+	position: static;	
+	width: 100%;
+	border-radius: 0 0 8px 8px;
 	}
 }
 
@@ -1478,13 +1596,16 @@ ul#lightGallery {
 	#mail {
 		padding: 0em 0 2em 0;
 	}
+
 	.gallery li {
 		display: inline-block;
 		float: left;
 		width: 100%;
 		padding: 1%;
 	}
-	.box, .box .overbox {
+
+	.box,
+	.box .overbox {
 		height: 120px;
 	}
 }
