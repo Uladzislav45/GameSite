@@ -498,7 +498,7 @@ a.hi-icon img {
 	border: 2px solid #fa3d03;
 	position: relative;
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
 	margin-bottom: 20px;
 	width: 100%;
 }
@@ -520,7 +520,7 @@ a.hi-icon img {
 .overview-item p {
 	font-size: 15px;
 	color: #000001;
-	width: auto;
+	width: 740px;
 	padding: 15px;
 }
 
@@ -837,6 +837,10 @@ ul#lightGallery {
 	.navbar-nav>li:nth-child(2) a {
 		margin-right: 36em !important;
 	}
+
+	.overview-item p {
+		width: 580px;
+	}
 }
 
 @media (max-width:1080px) {
@@ -1059,7 +1063,7 @@ ul#lightGallery {
 
 	.overview-item p {
 		font-size: 11px;
-
+		width: 365px;
 	}
 }
 
@@ -1131,6 +1135,7 @@ ul#lightGallery {
 		position: relative;
 		width: 40%;
 	}
+
 	.overview h3 {
 		font-size: 18px;
 	}
@@ -1289,6 +1294,12 @@ ul#lightGallery {
 	.box .title {
 		font-size: 1em;
 	}
+	.overview-item .btn-overview {
+		font-size: 12px;
+		right: 5px;
+		bottom: 5px;
+	}
+	
 }
 
 @media (max-width: 640px) {
@@ -1319,6 +1330,9 @@ ul#lightGallery {
 		width: 220px;
 		height: 150px;
 	}
+	.overview-item p {
+		width: 340px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -1337,14 +1351,14 @@ ul#lightGallery {
 		top: 21%;
 	}
 
-	.overview-item .btn-overview {
-		position: sticky;
-		border-radius: 0 8px 8px 0;
-	}
+	
 
 	.overview-item img {
 		width: 250px;
 		height: 180px;
+	}
+	.overview-item p {
+		width: 270px;
 	}
 }
 
@@ -1398,6 +1412,12 @@ ul#lightGallery {
 
 	.overview-item p {
 		font-size: 11px;
+		width: auto;
+	}
+	.overview-item .btn-overview {
+		position: static;
+		width: 100%;
+		border-radius: 0 0 8px 8px;
 	}
 }
 
@@ -1423,6 +1443,7 @@ ul#lightGallery {
 		font-size: 1.4em;
 		letter-spacing: 4px;
 	}
+
 	.agile_mail_grid textarea {
 		outline: none;
 		min-height: 119px;
@@ -1441,6 +1462,7 @@ ul#lightGallery {
 	.box .overbox {
 		height: 138px;
 	}
+
 	.overview-item p {
 		font-size: 9px;
 	}
@@ -1565,10 +1587,11 @@ ul#lightGallery {
 	.navigation_pos h1 a {
 		font-size: .65em;
 	}
+
 	.overview-item .btn-overview {
-	position: static;	
-	width: 100%;
-	border-radius: 0 0 8px 8px;
+		position: static;
+		width: 100%;
+		border-radius: 0 0 8px 8px;
 	}
 }
 
