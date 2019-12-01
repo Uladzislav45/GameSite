@@ -75,7 +75,7 @@ function checkInputs() {
         emptyInputs++;
         var erroMsg = document.createElement('span');
         erroMsg.classList.add('help-block');
-        erroMsg.innerHTML = 'Enter the First Name';
+        erroMsg.innerHTML = 'Enter the Name';
         document.getElementById('name').classList.add('errorMsg');
         document.getElementById('name').parentElement.insertBefore(erroMsg, null);
     }
@@ -127,56 +127,6 @@ function removeAlerts() {
 }
 
 
-// function prov_adress(obj) {
-//     var adr=obj.mail.value;
-//     var par=obj.pas.value;
-//     var adr_pattern=/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i;
-//     var par_pattern=/[0-9a-z]+/i;
-//     var prov=adr_pattern.test(adr);
-//     var prov1=par_pattern.test(par);
-//     if (prov==true &&  prov1==true) {
-//           alert("Вы зарегистрированы!");
-//     }
-//     else {
-//           alert("Введенные данные некорректны!");
-//     }
-//   }
-
-
-// function CheckName() {
-//     var patternName = /[^A-zА-яЁё]/;
-//     if (patternName.test(document.getElementById("name").value)) {
-//         var errorMsg = document.createElement('span');
-//         errorMsg.classList.add('help-block');
-//         errorMsg.innerHTML = 'Waters only letters';
-//         document.getElementById("name").classList.add('errorMsg');
-//         document.getElementById("name").parentElement.insertBefore(errorMsg, null);
-//     }
-// }
-// function CheckMail() {
-//      var patternMail =/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i;
-//     if (patternMail.test(document.getElementById("email").value)) {
-
-//         var errorMsg = document.createElement('span');
-//         errorMsg.classList.add('help-block');
-//         errorMsg.innerHTML = 'xxxxx@example.com';
-//         document.getElementById("email").classList.add('errorMsg');
-//         document.getElementById("email").parentElement.insertBefore(errorMsg, null);
-//     }
-// }
-// function CheckPhone() {
-
-//     var patternPhone = /[^A-zА-яЁё]/;
-//     if (patternPhone.test(document.getElementById("phone").value)) {
-//         var errorMsg = document.createElement('span');
-//         errorMsg.classList.add('help-block');
-//         errorMsg.innerHTML = 'Waters only letters';
-//         document.getElementById("phone").classList.add('errorMsg');
-//         document.getElementById("phone").parentElement.insertBefore(errorMsg, null);
-//     }
-// }
-
-
 
 //gallery
 
@@ -189,3 +139,9 @@ $(document).ready(function () {
         mobileSrc: true
     });
 });
+
+
+//animation
+$(document).ready(function () {
+    new WOW().init();
+  });
