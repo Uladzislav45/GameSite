@@ -50,36 +50,67 @@ function check(event) {
     event.preventDefault();
     removeAlerts();
     checkInputs();
+    
 
 }
 
 
 function checkInputs() {
     var emptyInputs = 0;
+    var patternName =/[^A-zА-яЁё]/;
+    var patternMail = /[0-9]/;
+    var patternPhone =(/[^0-9]/g, ''); 
     for (var i = 0; i < requireInputs.length; i++) {
         if (!requireInputs[i].value) {
             emptyInputs++;
             var errorMsg = document.createElement('span');
             errorMsg.classList.add('help-block');
-            errorMsg.innerHTML = 'Enter text';
+            errorMsg.innerHTML = 'Enter the text';
             requireInputs[i].classList.add('errorMsg');
             requireInputs[i].parentElement.insertBefore(errorMsg, null);
         }
     }
+        if (patternName.test(document.getElementById("name").value)) {
+            emptyInputs++;
+            var erroMsg = document.createElement('span');
+            erroMsg.classList.add('help-block');
+            erroMsg.innerHTML = 'Enter the First Name';
+            document.getElementById('name').classList.add('errorMsg');
+            document.getElementById('name').parentElement.insertBefore(erroMsg, null);
+        }
+        if (patternMail.test(document.getElementById("email").value)) {
+            emptyInputs++;
+            var errMsg = document.createElement('span');
+            errMsg.classList.add('help-block');
+            errMsg.innerHTML = 'xxxx@example.com';
+            document.getElementById('email').classList.add('errorMsg');
+            document.getElementById('email').parentElement.insertBefore(errMsg, null);
+
+        }
+        if (patternPhone.test(document.getElementById("phone").value)) {
+            emptyInputs++;
+            var errMesg = document.createElement('span');
+            errMesg.classList.add('help-block');
+            errMesg.innerHTML = 'Enter only numbers';
+            document.getElementById('phone').classList.add('errorMsg');
+            document.getElementById('phone').parentElement.insertBefore(errMesg ,null);
+        }
+
     if (emptyInputs === 0) {
         var messeg = document.getElementById('messeg');
         messeg.className = 'messeg';
         setInterval(function () {
             messeg.className = 'messeg-none';
         }, 4000);
-        btn.className ='btn-contact_disabled';
+        btn.className = 'btn-contact_disabled';
         btn.setAttribute('disabled', true);
         form.reset();
-        
+
         return true;
     } else {
         return false;
     }
+
 }
 
 function removeAlerts() {
@@ -92,44 +123,66 @@ function removeAlerts() {
     }
 }
 
-// var reg = document.getElementById('name');
-// reg.onkeypress = function(e) {   
-//   var prohibited = "!@#$%^&*()№+=;:`~\|'?/.><,\"0123456789";
-// 	var key = String.fromCharCode(e.which);
-//   if(prohibited.indexOf(key) >= 0){
-// 		console.log('invalid key pressed');    
-//    	return false;
+
+// function prov_adress(obj) {
+//     var adr=obj.mail.value;
+//     var par=obj.pas.value;
+//     var adr_pattern=/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i;
+//     var par_pattern=/[0-9a-z]+/i;
+//     var prov=adr_pattern.test(adr);
+//     var prov1=par_pattern.test(par);
+//     if (prov==true &&  prov1==true) {
+//           alert("Вы зарегистрированы!");
+//     }
+//     else {
+//           alert("Введенные данные некорректны!");
+//     }
 //   }
-//   return true;    
-// };
-// function validEmail(e) {
-//     var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-//     return String(e).search (filter) != -1;
+
+
+// function CheckName() {
+//     var patternName = /[^A-zА-яЁё]/;
+//     if (patternName.test(document.getElementById("name").value)) {
+//         var errorMsg = document.createElement('span');
+//         errorMsg.classList.add('help-block');
+//         errorMsg.innerHTML = 'Waters only letters';
+//         document.getElementById("name").classList.add('errorMsg');
+//         document.getElementById("name").parentElement.insertBefore(errorMsg, null);
+//     }
 // }
-// function validEmail(event) {
-//     var filter = "!@#$%^&*()№+=;:`~\|'?/.><,\"0123456789";
-//     return String(event).search (filter) != -1;
+// function CheckMail() {
+//      var patternMail =/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i;
+//     if (patternMail.test(document.getElementById("email").value)) {
+
+//         var errorMsg = document.createElement('span');
+//         errorMsg.classList.add('help-block');
+//         errorMsg.innerHTML = 'xxxxx@example.com';
+//         document.getElementById("email").classList.add('errorMsg');
+//         document.getElementById("email").parentElement.insertBefore(errorMsg, null);
+//     }
 // }
-function isEmailAddress(event) {
-    var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return pattern.test(event);  // returns a boolean 
- }
- 
+// function CheckPhone() {
+
+//     var patternPhone = /[^A-zА-яЁё]/;
+//     if (patternPhone.test(document.getElementById("phone").value)) {
+//         var errorMsg = document.createElement('span');
+//         errorMsg.classList.add('help-block');
+//         errorMsg.innerHTML = 'Waters only letters';
+//         document.getElementById("phone").classList.add('errorMsg');
+//         document.getElementById("phone").parentElement.insertBefore(errorMsg, null);
+//     }
+// }
 
 
 
 //gallery
 
-$(document).ready(function() {
+$(document).ready(function () {
     $("#lightGallery").lightGallery({
-        mode:"fade",
-        speed:800,
-        caption:true,
-        desc:true,
-        mobileSrc:true
+        mode: "fade",
+        speed: 800,
+        caption: true,
+        desc: true,
+        mobileSrc: true
     });
-}); 
-
-
-
-
+});
