@@ -363,6 +363,7 @@ a.hi-icon img {
 .footer {
 	background: #000;
 	padding: 6em 0 5em 0;
+	
 }
 
 .footer form {
@@ -652,6 +653,7 @@ a.hi-icon img {
 	text-align: center;
 	background: rgb(252, 104, 104);
 	color: red;
+	margin: 0;
 }
 .errorMsg {
 	border-color: red;
@@ -660,7 +662,7 @@ a.hi-icon img {
 .messeg {
 
 	position: relative;
-	margin-top: 20px;
+	margin-top: 10px;
 	height: auto;
 	// width: 540px;
 	text-align: center;
@@ -785,8 +787,8 @@ ul#lightGallery {
 //scrollUp
 #upbutton {
 	background: url("/img/arrow.png") no-repeat top left;
-	height: 60px;
-	width: 60px;
+	height: 40px;
+	width: 40px;
 	bottom: 30px;
 	right: 30px;
 	cursor: pointer;
@@ -1060,6 +1062,9 @@ ul#lightGallery {
 	.overview-item p {
 		font-size: 11px;
 		width: 365px;
+	}
+	.help-block{
+		font-size: 11px;
 	}
 }
 
@@ -1335,6 +1340,9 @@ ul#lightGallery {
 	.overview-item p {
 		width: 340px;
 	}
+	.help-block{
+		font-size: 11px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -1473,6 +1481,9 @@ ul#lightGallery {
 
 	.overview-item p {
 		font-size: 9px;
+	}
+	.help-block{
+		font-size: 12px;
 	}
 }
 
@@ -1642,5 +1653,8 @@ ul#lightGallery {
 	.box,
 	.box .overbox {
 		height: 120px;
+	}
+	.help-block{
+		font-size: 11px;
 	}
 }

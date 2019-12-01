@@ -50,16 +50,17 @@ function check(event) {
     event.preventDefault();
     removeAlerts();
     checkInputs();
-    
+
 
 }
-
+// /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}/gi;
+// /[^a-zA-Z0-9]/g;
 
 function checkInputs() {
     var emptyInputs = 0;
-    var patternName =/[^A-zА-яЁё]/;
-    var patternMail = /[0-9]/;
-    var patternPhone =(/[^0-9]/g, ''); 
+    var patternName = /[^0-9\-\.]/gi;
+    var patternMail = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}/g;
+    var patternPhone = /[^A-zА-яЁё]/;
     for (var i = 0; i < requireInputs.length; i++) {
         if (!requireInputs[i].value) {
             emptyInputs++;
@@ -70,31 +71,33 @@ function checkInputs() {
             requireInputs[i].parentElement.insertBefore(errorMsg, null);
         }
     }
-        if (patternName.test(document.getElementById("name").value)) {
-            emptyInputs++;
-            var erroMsg = document.createElement('span');
-            erroMsg.classList.add('help-block');
-            erroMsg.innerHTML = 'Enter the First Name';
-            document.getElementById('name').classList.add('errorMsg');
-            document.getElementById('name').parentElement.insertBefore(erroMsg, null);
-        }
-        if (patternMail.test(document.getElementById("email").value)) {
-            emptyInputs++;
-            var errMsg = document.createElement('span');
-            errMsg.classList.add('help-block');
-            errMsg.innerHTML = 'xxxx@example.com';
-            document.getElementById('email').classList.add('errorMsg');
-            document.getElementById('email').parentElement.insertBefore(errMsg, null);
+    if (!patternName.test(document.getElementById("name").value)) {
+        emptyInputs++;
+        var erroMsg = document.createElement('span');
+        erroMsg.classList.add('help-block');
+        erroMsg.innerHTML = 'Enter the First Name';
+        document.getElementById('name').classList.add('errorMsg');
+        document.getElementById('name').parentElement.insertBefore(erroMsg, null);
+    }
+    if (!patternMail.test(document.getElementById("email").value)) {
+       
+        emptyInputs++;
+        var errMsg = document.createElement('span');
+        errMsg.classList.add('help-block');
+        errMsg.innerHTML = 'xxxx@example.com';
+        document.getElementById('email').classList.add('errorMsg');
+        document.getElementById('email').parentElement.insertBefore(errMsg, null);
 
-        }
-        if (patternPhone.test(document.getElementById("phone").value)) {
-            emptyInputs++;
-            var errMesg = document.createElement('span');
-            errMesg.classList.add('help-block');
-            errMesg.innerHTML = 'Enter only numbers';
-            document.getElementById('phone').classList.add('errorMsg');
-            document.getElementById('phone').parentElement.insertBefore(errMesg ,null);
-        }
+    }
+
+    if (!patternPhone.test(document.getElementById("phone").value)) {
+        emptyInputs++;
+        var errMesg = document.createElement('span');
+        errMesg.classList.add('help-block');
+        errMesg.innerHTML = '375 xx xxx xx xx example';
+        document.getElementById('phone').classList.add('errorMsg');
+        document.getElementById('phone').parentElement.insertBefore(errMesg, null);
+    }
 
     if (emptyInputs === 0) {
         var messeg = document.getElementById('messeg');
