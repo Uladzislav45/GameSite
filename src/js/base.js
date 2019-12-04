@@ -22,7 +22,8 @@ var smoothJumpUp = function () {
         window.scrollBy(0, -500);
         setTimeout(smoothJumpUp, 20);
     }
-}
+};
+
 
 window.onscroll = function () {
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -75,7 +76,7 @@ function checkInputs() {
         emptyInputs++;
         var erroMsg = document.createElement('span');
         erroMsg.classList.add('help-block');
-        erroMsg.innerHTML = 'Enter the Name';
+        erroMsg.innerHTML = 'Enter a name in letters only';
         document.getElementById('name').classList.add('errorMsg');
         document.getElementById('name').parentElement.insertBefore(erroMsg, null);
     }
